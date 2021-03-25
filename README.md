@@ -1,4 +1,16 @@
-# shellscripting
+# shell-scripting
+Which shell Scripting ??
+
+There are different types of shells.
+
+From Unix World:
+     1. SH
+     2. CSH
+     3. KSH
+
+BASH = SH + CSH + KSH
+
+
 To learn Shell Scripting
 1. She-Bang & Comments
 2. Variables
