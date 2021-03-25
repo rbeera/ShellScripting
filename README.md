@@ -10,14 +10,18 @@ From Unix World:
 
 BASH = SH + CSH + KSH
 
+BASH IS DEFAULT
+
+Bash and SH are the same in command line
 
 To learn Shell Scripting
 1. She-Bang & Comments
-2. Variables
-3. Inputs
-4. Functions
-5. Misc
-6. Conditions
-7. Loops
+2. Print   
+3. Variables
+4. Inputs
+5. Functions
+6. Misc
+7. Conditions
+8. Loops
 
 ## Project Setup using Scripting
