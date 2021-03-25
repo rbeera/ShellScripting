@@ -20,7 +20,7 @@ echo -e "Hello\n\nWorld"
 # Reset       0
 # Bold        1
 
-# Syntax: echo -e "\e[COLCODEnMESSAGE"
+# Syntax: echo -e "\e[COLCODEmMESSAGE"
 
-echo -e "\e[31nHello in Red"
-echo -e "\e[1;31nHello in Bold Red"
+echo -e "\e[31mHello in Red"
+echo -e "\e[1;31mHello in Bold Red"
