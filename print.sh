@@ -24,3 +24,5 @@ echo -e "Hello\n\nWorld"
 
 echo -e "\e[31mHello in Red"
 echo -e "\e[1;31mHello in Bold Red"
+
+echo "================== Printing options are finished ================"
