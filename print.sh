@@ -22,7 +22,7 @@ echo -e "Hello\n\nWorld"
 
 # Syntax: echo -e "\e[COLCODEmMESSAGE"
 
-echo -e "\e[31mHello in Red"
-echo -e "\e[1;31mHello in Bold Red"
+echo -e "\e[31mHello in Red\e[0m"
+echo -e "\e[1;31mHello in Bold Red\e[0m"
 
 echo "================== Printing options are finished ================"
