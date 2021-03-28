@@ -9,7 +9,7 @@ echo "DevOps training covers shell scripting & Ansible"
 
 ## Declaring a variable , Syntax: var = data
 
-COURSE = DevOps
+COURSE=DevOps
 echo Welcome to ${COURSE} training
 echo Training of $COURSE lasts for 70 days
 echo "$COURSE training covers shell scripting & Ansible"
