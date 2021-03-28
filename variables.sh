@@ -19,3 +19,12 @@ a=100
 fruit=Apple
 echo $fruit is $ano
 echo $fruit is ${a}no
+
+## Dynamic variables
+# 1. Command Substitution var =$(commands)
+# 2. Arithmetic Substitution var = $((expressions))
+
+echo Good Morning , Todays date is  2021-03-29
+
+DATE=$(date +%F)
+echo Good Morning , Today date is ${DATE}
