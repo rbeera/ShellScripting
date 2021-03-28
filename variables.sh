@@ -28,3 +28,6 @@ echo Good Morning , Todays date is  2021-03-29
 
 DATE=$(date +%F)
 echo Good Morning , Today date is ${DATE}
+
+echo "Env variable UID = ${UID}"
+echo "Env variable COURSE = ${COURSE}"
