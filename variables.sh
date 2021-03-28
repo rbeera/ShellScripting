@@ -18,4 +18,4 @@ echo "$COURSE training covers shell scripting & Ansible"
 a=100
 fruit=Apple
 echo $fruit is $ano
-echo $fruit is ${a}ano
+echo $fruit is ${a}no
