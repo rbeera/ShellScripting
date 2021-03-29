@@ -3,7 +3,7 @@
 yum install nginxcccc -y
 
 if [ $? -ne 0 ]; then
-  echo -e "\e[1,31mNginx Installation is failure\e[0m"
+  echo -e "\e[1;31mNginx Installation is failure\e[0m"
   exit 2
 fi
 
