@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo -e "\e[1;35m [INFO] Installing Nginx\e[0m"
-yum install nginxcccc -y
+yum install nginx -y
 
 if [ $? -ne 0 ]; then
   echo -e "\e[1;31m [ERROR] Nginx Installation is failure\e[0m"
