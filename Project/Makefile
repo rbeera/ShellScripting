@@ -6,3 +6,6 @@ catalogue: ## Install Catalogue component for roboshop project
 
 cart: ## Install cart component for roboshop project
 	@sh Components/cart.sh
+
+frontend: ## Install frontend component for roboshop project
+	@sh Components/frontend.sh
