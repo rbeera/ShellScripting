@@ -4,10 +4,8 @@ yum install nginx -y
 STAT $? "Nginx Installation"
 
 echo "----------------------------------------------------------------------------------------------"
-echo -e "\e[1;35m [INFO] Download Frontend Component\e[0m"
-echo "----------------------------------------------------------------------------------------------"
-echo "----------------------------------------------------------------------------------------------"
-echo "----------------------------------------------------------------------------------------------"
+exit
+
 # curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
 # cd /usr/share/nginx/html
 # rm -rf *
