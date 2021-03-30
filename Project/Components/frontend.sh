@@ -26,5 +26,5 @@ STAT $? "Nginx Configuration Updating"
 
 PRINT " Nginx Enabling"
 systemctl enable nginx
-systenctl restart nginx
+systemctl restart nginx
 STAT $? " Nginx restarting"
