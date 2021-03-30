@@ -11,3 +11,20 @@ echo  '[mongodb-org-4.2]
   gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc' >/etc/yum.repos.d/mongodb.repo
 
 STAT $? "Setup MongoDB repository"
+
+PRINT "Install MongoDB"
+yum install -y mongodb-org
+STAT $? "MongoDB Installation"
+
+# systemctl enable mongod
+# systemctl start mongod
+# /etc/mongod.conf
+# systemctl restart mongod
+
+# curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
+
+# cd /tmp
+# unzip mongodb.zip
+# cd mongodb-main
+# mongo < catalogue.js
+# mongo < users.js
