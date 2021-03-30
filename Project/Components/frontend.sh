@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SOURCE Components/common.sh
+source Components/common.sh
 COMPONENT=frontend
 
 PRINT "Installing Nginx"
