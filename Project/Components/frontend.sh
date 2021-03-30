@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 SOURCE Components/common.sh
+COMPONENT=frontend
 
 PRINT "Installing Nginx"
 yum install nginx -y
