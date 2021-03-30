@@ -16,15 +16,25 @@ PRINT "Install MongoDB"
 yum install -y mongodb-org
 STAT $? "MongoDB Installation"
 
-# systemctl enable mongod
-# systemctl start mongod
-# /etc/mongod.conf
-# systemctl restart mongod
+PRINT "Updating Configuration file"
+sed -i -e 's/1270.0.1/0.0.0.0/' /etc/mongod.conf
+STAT $? "Updating MongoDB configuration file"
 
-# curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
+PRINT "Start MongoDB"
+systemctl enable mongod
+systemctl start mongod
+STAT $? "Starting MongoDB"
 
-# cd /tmp
-# unzip mongodb.zip
-# cd mongodb-main
-# mongo < catalogue.js
-# mongo < users.js
+PRINT "Download MongoDB Schema"
+curl -s -L -o /tmp/mongodb.zip  "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
+STAT $? "Downloading MongoDB Schema"
+
+PRINT "Extract MongoDB Schemas"
+cd /tmp
+unzip mongodb.zip
+STAT $? "Extracting schemas"
+
+PRINT "Load Schema"
+cd mongodb-main
+mongo < catalogue.js && mongo < users.js
+STAT $? "Loading Schemas"
