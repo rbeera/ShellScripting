@@ -6,8 +6,6 @@ PRINT "Installing Nginx"
 yum install nginx -y
 STAT $? "Nginx Installation"
 
-exit
-
 PRINT "Download Frontend Component"
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
 STAT $? "Download Frontend"
