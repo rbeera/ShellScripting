@@ -65,11 +65,11 @@ Install_NodeJS_Dependencies() {
   STAT $? "Downloading Dependencies"
 }
 Setup_Service(){
-  PRINT "Setup SystemD Service for {COMPONENT}"
+  PRINT "Setup SystemD Service for ${COMPONENT}"
   mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
   sed -i -e 's/MONGO_DNSNAME/mongodb.devopspractice.tk/' /etc/systemd/system/${COMPONENT}.service
   systemctl daemon-reload && systemctl start ${COMPONENT} && systemctl enable ${COMPONENT}
-  STAT $? " Starting {COMPONENT} Service"
+  STAT $? " Starting ${COMPONENT} Service"
 }
 NodeJS_Setup() {
   NodeJS_Install
