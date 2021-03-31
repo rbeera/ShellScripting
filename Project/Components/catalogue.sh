@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+source Components/common.sh
+COMPONENT=catalogue
 
 PRINT "Install nodejs"
 yum install nodejs make gcc-c++ -y
