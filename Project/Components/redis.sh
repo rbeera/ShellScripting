@@ -9,6 +9,7 @@ PRINT "setup redis repos"
 if [ ! -f /etc/yum.repos.d/remi.repo ]; then
 yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
 STAT $? "Setting up Redis repos"
+fi
 
 PRINT "Redis configuration manager"
 yum-config-manager --enable remi
