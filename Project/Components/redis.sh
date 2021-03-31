@@ -11,10 +11,15 @@ yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
 STAT $? "Setting up Redis repos"
 
 PRINT "Redis configuration manager"
-# yum-config-manager --enable remi
-# yum install redis -y
-Update the BindIP from 127.0.0.1 to 0.0.0.0 in config file /etc/redis.conf
+yum-config-manager --enable remi
+yum install redis -y
+STAT $? "Install redis"
 
-Start Redis Database
-# systemctl enable redis
-# systemctl start redis
+PRINT "Updating IP in redis configuration file"
+sed -i -e '/^bind/ c bind 0.0.0.0' /etc/redis.conf
+STAT $? "Update redis configuration file"
+
+PRINT "Start redis service"
+systemctl enable redis
+systemctl restart redis
+STAT $? "Starting Redis service"
