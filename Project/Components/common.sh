@@ -4,9 +4,10 @@ if [ "${USER_ID}" -ne 0 ]; then
   echo -e "\e[1;31mYou should be root user to perform this command\e[0m"
   exit 1
 fi
-
-set-hostname ${COMPONENT}
-disable-auto-shutdown
+OS_Prerequisites() {
+  set-hostname ${COMPONENT}
+  disable-auto-shutdown
+}
 
 PRINT() {
   echo "----------------------------------------------------------------------------------------------"
@@ -59,15 +60,23 @@ Extract_Component() {
 
 Install_NodeJS_Dependencies() {
   PRINT "Download NodeJS dependencies"
-  cd /home/roboshop/catalogue
+  cd /home/roboshop/${COMPONENT}
   npm install --unsafe-perm
   STAT $? "Downloading Dependencies"
 }
-
+Setup_Service(){
+  mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
+  sed -i -e 's/MONGO_DNSNAME/mongodb.devopspractice.tk/' /etc/systemd/system/${COMPONENT}.service
+  systemctl daemon-reload
+  systemctl start ${COMPONENT}
+  systemctl enable ${COMPONENT}
+}
 NodeJS_Setup() {
   NodeJS_Install
   Roboshop_Add_App_User
   Download_Component_From_GitHub
   Extract_Component
   Install_NodeJS_Dependencies
+  Setup_Service
+}
 }
