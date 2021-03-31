@@ -35,7 +35,7 @@ NodeJS_Install() {
 
 Roboshop_Add_App_User() {
   id roboshop
-  if [ $? -eq 0]; then
+  if [ $? -eq 0 ]; then
     PRINT "Create Roboshop User - User already exists"
     return
   fi
