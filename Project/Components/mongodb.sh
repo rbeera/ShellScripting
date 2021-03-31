@@ -2,6 +2,7 @@
 
 source Components/common.sh
 COMPONENT=mongodb
+OS_Prerequisites
 
 PRINT "Setup MongoDB Repository"
 echo  '[mongodb-org-4.2]
