@@ -21,4 +21,4 @@ IPADDRESS=$(aws ec2 describe-instances     --filters Name=tag:Name,Values=${COMP
 
 sed -e "s/COMPONENT/${COMPONENT}/" -e "/s/IPADDRESS/${IPADDRESS}/" record.json >/tmp/record.json
 
-aws route53 change-resource-record-sets --hosted-zone-id Z091806728R3N2OLW5D8Q --change-batch = file:///tmp/record.json
+aws route53 change-resource-record-sets --hosted-zone-id Z091806728R3N2OLW5D8Q --change-batch=file:///tmp/record.json
