@@ -9,4 +9,7 @@ if [ -z "${COMPONENT}" ]; then
   exit 1
 fi
 
-aws ec2 run-instances --launch-template LaunchTemplateId=${LID},Version=${LVER} --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}}]" | jq
+INSTANCE_EXISTS=$(aws ec2 describe-instances     --filters Name=tag:Name,Values=cart | jq .Reservations[])
+if [ -z "INSTANCE EXISTS" ]; then
+  aws ec2 run-instances --launch-template LaunchTemplateId=${LID},Version=${LVER} --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}}]" | jq
+fi

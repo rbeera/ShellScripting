@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 source Components/common.sh
-COMPONENT=cart
+COMPONENT=user
 NodeJS_Setup

@@ -63,3 +63,11 @@ Install_NodeJS_Dependencies() {
   npm install --unsafe-perm
   STAT $? "Downloading Dependencies"
 }
+
+NodeJS_Setup() {
+  NodeJS_Install
+  Roboshop_Add_App_User
+  Download_Component_From_GitHub
+  Extract_Component
+  Install_NodeJS_Dependencies
+}
