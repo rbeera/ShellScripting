@@ -43,3 +43,23 @@ Roboshop_Add_App_User() {
   useradd roboshop
   STAT $? "Creating app user"
 }
+
+Download_Component_From_GitHub() {
+  PRINT "Download ${COMPONENT}"
+  curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip"
+  STAT $? "Downloading ${COMPONENT} component"
+}
+
+Extract_Component() {
+  PRINT "Extract ${COMPONENT}"
+  cd /home/roboshop
+  rm -rf ${COMPONENT} && unzip /tmp/${COMPONENT}.zip && mv ${COMPONENT}-main ${COMPONENT}
+  STAT $? "Extracting ${COMPONENT}"
+}
+
+Install_NodeJS_Dependencies() {
+  PRINT "Download NodeJS dependencies"
+  cd /home/roboshop/catalogue
+  npm install --unsafe-perm
+  STAT $? "Downloading Dependencies"
+}
