@@ -58,6 +58,12 @@ Extract_Component() {
   STAT $? "Extracting ${COMPONENT}"
 }
 
+Extract_Component_to_tmp(){
+  PRINT "Extract ${COMPONENT}"
+  cd/tmp
+  rm -rf ${COMPONENT} && unzip /tmp/${COMPONENT}.zip
+  STAT $? "Extracting ${COMPONENT}"
+}
 Install_NodeJS_Dependencies() {
   PRINT "Download NodeJS dependencies"
   cd /home/roboshop/${COMPONENT}
