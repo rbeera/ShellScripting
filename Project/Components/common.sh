@@ -4,6 +4,10 @@ if [ "${USER_ID}" -ne 0 ]; then
   echo -e "\e[1;31mYou should be root user to perform this command\e[0m"
   exit 1
 fi
+
+set-hostname ${COMPONENT}
+disable-auto-shutdown
+
 PRINT() {
   echo "----------------------------------------------------------------------------------------------"
   echo -e "\e[1;35m [INFO] $1\e[0m"
