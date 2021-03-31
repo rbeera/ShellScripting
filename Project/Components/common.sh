@@ -63,6 +63,7 @@ Extract_Component_to_tmp(){
   cd/tmp
   rm -rf ${COMPONENT} && unzip /tmp/${COMPONENT}.zip
   STAT $? "Extracting ${COMPONENT}"
+
 }
 Install_NodeJS_Dependencies() {
   PRINT "Download NodeJS dependencies"
