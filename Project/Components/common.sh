@@ -79,4 +79,3 @@ NodeJS_Setup() {
   Install_NodeJS_Dependencies
   Setup_Service
 }
-}
