@@ -2,7 +2,7 @@ help:  ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 common: ## run this command for all validations
-	@sh - x Components/common.sh
+	@sh Components/common.sh
 
 catalogue:	common ## Install Catalogue component for roboshop project
 	@sh Components/catalogue.sh
