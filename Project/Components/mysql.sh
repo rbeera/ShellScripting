@@ -35,11 +35,10 @@ if [ $? -ne 0 ]; then
     PRINT "MySQL Password reset is not required"
   fi
 
-# mysql_secure_installation
+Download_Component_From_GitHub
+Extract_Component_to_tmp
 
-
-# mysql -u root -p
-
-#Run the following SQL commands to remove the password policy.
-#> uninstall plugin validate_password;
-#> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+PRINT "Load mysql schema"
+  cd /tmp/mysql-main
+  mysql -u root -pRoboShop@123 <shipping.sql
+STAT $? "Loading schemas"
