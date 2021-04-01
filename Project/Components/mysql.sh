@@ -23,7 +23,7 @@ PRINT "start mysql service"
 Start MySQL.
 systemctl enable mysqld
 systemctl start mysqld
-STAT "starting mysql service"
+STAT $? "starting mysql service"
 
 grep temp /var/log/mysqld.log
 
