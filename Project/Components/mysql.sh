@@ -2,7 +2,6 @@
 
 source Components/common.sh
 COMPONENT=mysql
-
 OS_Prerequisites
 
 PRINT "Setting up mysql Repos"
