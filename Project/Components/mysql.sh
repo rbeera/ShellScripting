@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 source Components/common.sh
-COMPONENT=cart
+COMPONENT=mysql
 
 OS_Prerequisites
 
