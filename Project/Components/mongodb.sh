@@ -23,7 +23,7 @@ STAT $? "Updating MongoDB configuration file"
 
 PRINT "Start MongoDB"
 systemctl enable mongod
-systemctl start mongod
+systemctl restart mongod
 STAT $? "Starting MongoDB"
 
 PRINT "Download MongoDB Schema"
