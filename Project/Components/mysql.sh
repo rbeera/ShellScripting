@@ -20,7 +20,6 @@ yum install mysql-community-server -y
 STAT $? "Installing mysql"
 
 PRINT "start mysql service"
-start MySQL.
 systemctl enable mysqld
 systemctl start mysqld
 STAT $? "starting mysql service"
