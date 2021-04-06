@@ -24,3 +24,6 @@ user:	common ## Install user component for roboshop project
 
 mysql:	common ## Install mysql component for roboshop project
 	@sh Components/mysql.sh
+
+shipping:	common ## Install mysql component for roboshop project
+	@sh Components/shipping.sh
