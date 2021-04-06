@@ -15,6 +15,6 @@ Extract_Component
 PRINT "Compile Shipping Code"
 cd /home/roboshop/shipping
 mvn clean package && mv target/shipping-1.0.jar shipping.jar
-STAT $? "Compling code"
+STAT $? "Compiling code"
 
 Setup_Service
