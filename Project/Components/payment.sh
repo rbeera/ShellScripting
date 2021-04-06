@@ -16,3 +16,11 @@ PRINT "Install the dependencies"
 cd /home/roboshop/payment
 pip3 install -r requirements.txt
 STAT $? "Installing dependencies"
+
+USER_ID=$(id -u roboshop)
+GROUP_ID=$(id -g roboshop)
+
+PRINT "Update payment configuration"
+sed -i -e "/^uid/ c uid = ${USER_ID}" -e "/^gid/ c gid = ${GROUP_ID}" /home/roboshop/payment/payment.ini
+STAT $? "Updating payment configuration"
+Setup_Service

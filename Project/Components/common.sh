@@ -81,6 +81,9 @@ Setup_Service(){
          -e "s/CATALOGUE_ENDPOINT/catalogue.devopspractice.tk/" \
          -e "s/DBHOST/mysql.devopspractice.tk/" \
          -e 's/CARTENDPOINT/cart.devopspractice.tk/' \
+         -e "s/CARTHOST/cart.devopspractice.tk" \
+         -e "s/USERHOST/user.devopspractice.tk" \
+         -e "s/AMQPHOST/rabbitmq.devopspractice.tk" \
          /etc/systemd/system/${COMPONENT}.service
   systemctl daemon-reload && systemctl restart ${COMPONENT} && systemctl enable ${COMPONENT}
   STAT $? " Starting ${COMPONENT} Service"
