@@ -77,8 +77,8 @@ Setup_Service(){
   mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
   sed -i -e 's/MONGO_DNSNAME/mongodb.devopspractice.tk/' \
          -e "s/MONGO_ENDPOINT/mongodb.devopspractice.tk/" \
-         -e "s/REDIS_ENDPOINT/redis.devopspracatice.tk/"  \
-         -e "s/CATALOGUE_ENDPOINT/catalogue.devopspracatice.tk/" \
+         -e "s/REDIS_ENDPOINT/redis.devopspractice.tk/"  \
+         -e "s/CATALOGUE_ENDPOINT/catalogue.devopspractice.tk/" \
          -e "s/DBHOST/mysql.devopspractice.tk/" \
          -e 's/CARTENDPOINT/cart.devopspractice.tk/' \
          /etc/systemd/system/${COMPONENT}.service
