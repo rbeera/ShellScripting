@@ -27,3 +27,9 @@ mysql:	common ## Install mysql component for roboshop project
 
 shipping:	common ## Install mysql component for roboshop project
 	@sh Components/shipping.sh
+
+rabbitmq:	common ## Install mysql component for roboshop project
+	@sh Components/rabbitmq.sh
+
+payment:	common ## Install mysql component for roboshop project
+	@sh Components/payment.sh
