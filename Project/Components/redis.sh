@@ -12,7 +12,6 @@ STAT $? "Setting up Redis repos"
 fi
 
 PRINT "Redis configuration manager"
-yum-config-manager --enable remi
 yum install redis -y
 STAT $? "Install redis"
 
