@@ -23,6 +23,7 @@ systemctl enable mysqld
 systemctl start mysqld
 STAT $? "starting mysql service"
 grep temp /var/log/mysqld.log
+
 #PRINT "Change default password"
 #echo show databases | mysql - uroot -pRoboShop@123
 #if [ $? -ne 0 ]; then
