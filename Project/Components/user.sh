@@ -2,4 +2,6 @@
 
 source Components/common.sh
 COMPONENT=user
+
+OS_Prerequisites
 NodeJS_Setup
